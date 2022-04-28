@@ -13,6 +13,7 @@ import {
 /* Need to install react router dome from: https://v5.reactrouter.com/web/guides/quick-start
 https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6
 https://reactrouter.com/docs/en/v6/getting-started/installation
+https://create-react-app.dev/docs/deployment/
 */
 function App() {
   const [mode, setMode] = useState('light')
