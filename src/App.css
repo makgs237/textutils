@@ -40,3 +40,7 @@
 .blank{
   color: rgb(183, 0, 255);
 }
+
+.hidden{
+  display: none;
+}
