@@ -7,8 +7,7 @@ import React, { useState } from 'react'
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  Link
+  Routes
 } from "react-router-dom";                                                                                                          
 
 /* Need to install react router dome from: https://v5.reactrouter.com/web/guides/quick-start
