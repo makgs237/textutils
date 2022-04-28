@@ -14,6 +14,7 @@ import {
 https://reactrouter.com/docs/en/v6/upgrading/v5#upgrade-to-react-router-v6
 https://reactrouter.com/docs/en/v6/getting-started/installation
 https://create-react-app.dev/docs/deployment/
+https://github.com/makgs237/TextUtils-React/
 */
 function App() {
   const [mode, setMode] = useState('light')
