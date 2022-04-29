@@ -5,17 +5,16 @@ export default function TextForm(props) {
     //console.log("Uppercase was clicks");
     let newText = text.toUpperCase();
     setText(newText);
-    props.showAlert("Converted to uppercase!","success");
+    props.showAlert("Converted to uppercase!", "success");
   };
   const handleUpChange = (event) => {
     //console.log("Uppercase was change");
     setText(event.target.value);
-    
   };
   const handleLpClicks = () => {
     let newText = text.toLowerCase();
     setText(newText);
-    props.showAlert("Converted to lowercase!","success");
+    props.showAlert("Converted to lowercase!", "success");
   };
 
   const newLineConverPtag = (arr) => {
@@ -44,19 +43,20 @@ export default function TextForm(props) {
     });
 
     setText(newText);
-    props.showAlert("Converted to titlecase!","success");
+    props.showAlert("Converted to titlecase!", "success");
   };
   const handleClearText = () => {
     let preview = document.getElementById("prevw");
-    preview.innerHTML = '';
+    preview.innerHTML = "";
     setText("");
-    props.showAlert("text cleared!","success");
+    props.showAlert("text cleared!", "success");
   };
   const handleCopyText = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
-    props.showAlert("copied to clipbord!","success");
+    document.getSelection().removeAllRanges(); // This is function that removed selected text when you copied.
+    props.showAlert("copied to clipbord!", "success");
   };
   const [text, setText] = useState("");
   //text = 'new text'; // wrong way to set state
@@ -82,19 +82,49 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className={`btn btn btn-${props.mode === 'light' ? 'primary' : 'secondary'} me-3`} onClick={handleUpClicks}>
+        <button
+          disabled={text.length === 0}
+          className={`btn btn btn-${
+            props.mode === "light" ? "primary" : "secondary"
+          } mx-1 my-1`}
+          onClick={handleUpClicks}
+        >
           Conver to Uppercase
         </button>
-        <button className={`btn btn btn-${props.mode === 'light' ? 'primary' : 'secondary'} me-3`} onClick={handleLpClicks}>
+        <button
+          disabled={text.length === 0}
+          className={`btn btn btn-${
+            props.mode === "light" ? "primary" : "secondary"
+          } mx-1 my-1`}
+          onClick={handleLpClicks}
+        >
           Conver to Lowercase
         </button>
-        <button className={`btn btn btn-${props.mode === 'light' ? 'primary' : 'secondary'} me-3`} onClick={intoTitleCase}>
+        <button
+          disabled={text.length === 0}
+          className={`btn btn btn-${
+            props.mode === "light" ? "primary" : "secondary"
+          } mx-1 my-1`}
+          onClick={intoTitleCase}
+        >
           Conver to Titlecase
         </button>
-        <button className={`btn btn btn-${props.mode === 'light' ? 'primary' : 'secondary'} me-3`} onClick={handleCopyText}>
+        <button
+          disabled={text.length === 0}
+          className={`btn btn btn-${
+            props.mode === "light" ? "primary" : "secondary"
+          } mx-1 my-1`}
+          onClick={handleCopyText}
+        >
           Copy Text
         </button>
-        <button className={`btn btn btn-${props.mode === 'light' ? 'primary' : 'secondary'}`} onClick={handleClearText}>
+        <button
+          disabled={text.length === 0}
+          className={`btn btn btn-${
+            props.mode === "light" ? "primary" : "secondary"
+          } mx-1`}
+          onClick={handleClearText}
+        >
           Clear Text
         </button>
       </div>
