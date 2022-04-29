@@ -84,45 +84,35 @@ export default function TextForm(props) {
         </div>
         <button
           disabled={text.length === 0}
-          className={`btn btn btn-${
-            props.mode === "light" ? "primary" : "secondary"
-          } mx-1 my-1`}
+          className={`btn btn btn-${props.btnColor} mx-1 my-1`}
           onClick={handleUpClicks}
         >
           Conver to Uppercase
         </button>
         <button
           disabled={text.length === 0}
-          className={`btn btn btn-${
-            props.mode === "light" ? "primary" : "secondary"
-          } mx-1 my-1`}
+          className={`btn btn btn-${props.btnColor} mx-1 my-1`}
           onClick={handleLpClicks}
         >
           Conver to Lowercase
         </button>
         <button
           disabled={text.length === 0}
-          className={`btn btn btn-${
-            props.mode === "light" ? "primary" : "secondary"
-          } mx-1 my-1`}
+          className={`btn btn btn-${props.btnColor} mx-1 my-1`}
           onClick={intoTitleCase}
         >
           Conver to Titlecase
         </button>
         <button
           disabled={text.length === 0}
-          className={`btn btn btn-${
-            props.mode === "light" ? "primary" : "secondary"
-          } mx-1 my-1`}
+          className={`btn btn btn-${props.btnColor} mx-1 my-1`}
           onClick={handleCopyText}
         >
           Copy Text
         </button>
         <button
           disabled={text.length === 0}
-          className={`btn btn btn-${
-            props.mode === "light" ? "primary" : "secondary"
-          } mx-1`}
+          className={`btn btn btn-${props.btnColor} mx-1 my-1`}
           onClick={handleClearText}
         >
           Clear Text
